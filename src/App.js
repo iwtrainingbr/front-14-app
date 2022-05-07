@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Example from "./pages/Example";
+import Janaina from "./pages/Janaina";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/cadastro" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/exemplo" element={<Example/>} />
+        <Route path="/janaina" element={<Janaina/>} />
       </Routes>
 
 
