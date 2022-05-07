@@ -4,11 +4,11 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Example from "./pages/Example";
 
+
 export default function App() {
   return (
     <BrowserRouter>
 
-      Ola mundo
 
       <Routes>
         <Route path="/cadastro" element={<Register/>} />
