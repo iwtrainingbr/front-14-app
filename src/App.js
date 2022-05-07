@@ -2,7 +2,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Example from "./pages/Example"; 
+import Example from "./pages/Example";
 import RecuperarSenha from "./pages/RecuperarSenha";
 
 export default function App() {
