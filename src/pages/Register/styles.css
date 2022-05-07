@@ -1,0 +1,14 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+   
+}
+.conta, .login{
+    display: flex;
+    justify-content: center;
+
+   
+}
+.login{
+    text-decoration: none;
+}
