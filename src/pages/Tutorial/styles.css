@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&display=swap');
+
+
+.titulo {
+    display: block !important;
+    text-align: center !important;
+    margin: 0px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.messageTutorial {
+    color: rgb(71, 70, 70);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px;
+    min-height: 51px;
+}
+.boxImage {
+    height: 100%;
+}
+.mobileStepper {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
