@@ -9,6 +9,7 @@ import Carrinho from "./pages/Carrinho";
 import Navbar from "./components/Navbar";
 
 import "./styles.css";
+import Example from "./pages/Example";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/tutorial" element={<Tutorial/>} />
           <Route path="/recuperarsenha" element={<RecuperarSenha/>} />
           <Route path="/carrinho" element={<Carrinho/>} />
+          <Route path="/exemplo" element={<Example/>}/>
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,10 +1,10 @@
 import {Button, TextField, InputAdornment, IconButton} from "@mui/material";
-import {Favorite, ZoomOut, Visibility} from "@mui/icons-material";
+import {Favorite, ZoomOut, Visibility, VisibilityOff} from "@mui/icons-material";
 
 import { useState } from "react";
 
 export default function Login() {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState("text");
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -23,7 +23,9 @@ export default function Login() {
       label="Digite sua Senha"
       InputProps={{
         endAdornment: <InputAdornment>
-          <IconButton onClick={handleShowPassword}> <Visibility/> </IconButton>
+          <IconButton onClick={handleShowPassword}> 
+            {showPassword === true ? <VisibilityOff/> : <Visibility/>} 
+          </IconButton>
         </InputAdornment>
       }}
     />
