@@ -15,6 +15,7 @@ import imgOrganize from "./images/organize.png";
 import imgReady from "./images/ready.png";
 import imgControl from "./images/control.png";
 
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [

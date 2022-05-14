@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Tutorial from "./pages/Tutorial";
 import RecuperarSenha from "./pages/RecuperarSenha";
 import Carrinho from "./pages/Carrinho";
+import NotFound from "./pages/NotFound";
+
 
 import Navbar from "./components/Navbar";
 
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="/tutorial" element={<Tutorial/>} />
           <Route path="/recuperarsenha" element={<RecuperarSenha/>} />
           <Route path="/carrinho" element={<Carrinho/>} />
+          <Route path="/*" element={<NotFound/>} />
+
         </Routes>
       </div>
     </BrowserRouter>
