@@ -87,8 +87,8 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Perfil  <AccountBoxIcon/> </MenuItem>
-                <MenuItem onClick={handleClose}>Sair  <LogoutIcon sx={{ color: red[500] }} /> </MenuItem>
+                <MenuItem onClick={handleClose}><AccountBoxIcon/>Perfil</MenuItem>
+                <MenuItem onClick={handleClose}><LogoutIcon sx={{ color: red[500]} }/>Sair </MenuItem>
               </Menu>
             </div>
           )}
