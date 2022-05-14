@@ -4,6 +4,7 @@ import "./style.css";
 
 export default function RecuperarSenha() {
     return (
+      
       <div> 
             <h1 className="titulo">Recuperar conta</h1>
             <hr/>
@@ -15,9 +16,12 @@ export default function RecuperarSenha() {
 
             <a className="link" href="#">Cadastre-se</a>
              
-      </div>  
+      </div>
+        
          
-    )
+    );
+  
+    
 
 }
 

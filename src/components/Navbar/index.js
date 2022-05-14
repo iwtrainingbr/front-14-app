@@ -11,10 +11,20 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import Drawer from '@mui/material/Drawer';
+
+import MenuApp from '../Menu';
+
 
 export default function Navbar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const[sidebar, setSiderbar] = React.useState(false);
+
+  const openCloseSidebar = () => {
+     setSiderbar(!sidebar);
+  }
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -31,6 +41,12 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
 
+      <Drawer open={sidebar} onClose={openCloseSidebar} >
+         <MenuApp />
+
+         
+      </Drawer>
+
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -39,6 +55,7 @@ export default function Navbar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={openCloseSidebar}
           >
             <MenuIcon />
           </IconButton>
