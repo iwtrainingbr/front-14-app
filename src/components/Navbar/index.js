@@ -11,10 +11,19 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import { Drawer } from '@mui/material';
+import LogoutIcon from '@mui/icons-material/Logout';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { pink, red } from '@mui/material/colors';
 
 export default function Navbar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const [sidebar, setSidebar] = React.useState(false);
+  const openCloseSidebar = () => {
+    setSidebar(!sidebar);
+  }
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -29,7 +38,12 @@ export default function Navbar() {
   };
 
   return (
+
     <Box sx={{ flexGrow: 1 }}>
+
+      <Drawer open = {sidebar} onClose={openCloseSidebar}>
+        Menu
+      </Drawer>
 
       <AppBar position="static">
         <Toolbar>
@@ -39,6 +53,7 @@ export default function Navbar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick = {openCloseSidebar}
           >
             <MenuIcon />
           </IconButton>
@@ -72,8 +87,8 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Perfil  <AccountBoxIcon/> </MenuItem>
+                <MenuItem onClick={handleClose}>Sair  <LogoutIcon sx={{ color: red[500] }} /> </MenuItem>
               </Menu>
             </div>
           )}
