@@ -12,7 +12,10 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import { Drawer } from '@mui/material';
+import Drawer from '@mui/material/Drawer';
+
+import MenuApp from '../Menu';
+
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { pink, red } from '@mui/material/colors';
@@ -20,18 +23,12 @@ import { pink, red } from '@mui/material/colors';
 export default function Navbar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
-
+  
   const [sidebar, setSidebar] = React.useState(false)
 
   const openCloseSidebar = () => {
     setSidebar(!sidebar);
   };
-
-  const [sidebar, setSidebar] = React.useState(false);
-
-  const openCloseSidebar = () => {
-    setSidebar(!sidebar);
-  }
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -49,8 +46,8 @@ export default function Navbar() {
 
     <Box sx={{ flexGrow: 1 }}>
 
-      <Drawer open={sidebar} onClose={openCloseSidebar}>
-        Menu
+      <Drawer open={sidebar} onClose={openCloseSidebar} >
+         <MenuApp />
       </Drawer>
 
       <AppBar position="static">
@@ -61,7 +58,7 @@ export default function Navbar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick = {openCloseSidebar}
+            onClick={openCloseSidebar}
           >
             <MenuIcon />
           </IconButton>
