@@ -8,11 +8,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
+
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import Drawer from '@mui/material/Drawer';
-
+import { Drawer } from '@mui/material';
+import LogoutIcon from '@mui/icons-material/Logout';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { pink, red } from '@mui/material/colors';
 
 export default function Navbar() {
   const [auth, setAuth] = React.useState(true);
@@ -24,6 +27,11 @@ export default function Navbar() {
     setSidebar(!sidebar);
   };
 
+  const [sidebar, setSidebar] = React.useState(false);
+
+  const openCloseSidebar = () => {
+    setSidebar(!sidebar);
+  }
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -38,12 +46,12 @@ export default function Navbar() {
   };
 
   return (
+
     <Box sx={{ flexGrow: 1 }}>
 
-    <Drawer open={sidebar} onClose={openCloseSidebar}>
-    Menu
-    </Drawer>
-  
+      <Drawer open={sidebar} onClose={openCloseSidebar}>
+        Menu
+      </Drawer>
 
       <AppBar position="static">
         <Toolbar>
@@ -53,6 +61,7 @@ export default function Navbar() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick = {openCloseSidebar}
           >
             <MenuIcon />
           </IconButton>
@@ -86,8 +95,8 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}><AccountBoxIcon/>Perfil</MenuItem>
+                <MenuItem onClick={handleClose}><LogoutIcon sx={{ color: red[500]} }/>Sair </MenuItem>
               </Menu>
             </div>
           )}
