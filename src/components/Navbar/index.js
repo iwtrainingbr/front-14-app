@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
+
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
@@ -16,11 +17,14 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { pink, red } from '@mui/material/colors';
 
+import Drawer from "@mui/material/Drawer";
+
 export default function Navbar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const [sidebar, setSidebar] = React.useState(false);
+
   const openCloseSidebar = () => {
     setSidebar(!sidebar);
   }
@@ -41,8 +45,8 @@ export default function Navbar() {
 
     <Box sx={{ flexGrow: 1 }}>
 
-      <Drawer open = {sidebar} onClose={openCloseSidebar}>
-        Menu
+      <Drawer open={sidebar} onClose={openCloseSidebar}>
+        MENU
       </Drawer>
 
       <AppBar position="static">
