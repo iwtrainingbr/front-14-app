@@ -1,29 +1,33 @@
-import {Button, TextField, InputAdornment, IconButton} from "@mui/material";
-import {Favorite, ZoomOut, Visibility, VisibilityOff} from "@mui/icons-material";
+import {Button, TextField,InputAdornment,IconButton} from "@mui/material";
+import {Favorite, Visibility, VisibilityOff, ZoomOut} from "@mui/icons-material";
 
-import{useState}  from "react";
-
-export default function Login() {
-const [showPassword, setShowPassword] = useState(false);
-
-const handleShowPassword = () => {
-  setShowPassword(!showPassword);
-}
-import { useState } from "react";
-
+import { useState } from "react";  
+ 
 export default function Login() {
   const [showPassword, setShowPassword] = useState("text");
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   }
-
   return (
 
     <div>
     <h1>Login</h1> 
     <hr></hr>
     <TextField fullWidth label="Digite seu E-mail"/>
+
+    <TextField
+    type= {showPassword === true ? "text" : "password" }
+    fullWidth
+    label="Digite sua senha"
+    InputProps={{
+      endAdornment:<InputAdornment>
+        <IconButton onClick={handleShowPassword}>
+          {showPassword === true ? <VisibilityOff/> : <Visibility/>}
+           </IconButton>
+      </InputAdornment>
+    }}
+    />
     
     <TextField 
       type={showPassword === true ? "text" : "password"} 
