@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="drawing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.43455262"
+     inkscape:cx="804.27544"
+     inkscape:cy="487.85806"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="1919"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="141.69787"
+       y="413.6878"
+       width="771.64382"
+       height="449.07944"
+       id="rect1289" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#005800;fill-opacity:1;stroke-width:0.412999"
+       id="rect31"
+       width="225.0675"
+       height="225.0675"
+       x="16.393427"
+       y="43.228016"
+       ry="67.219246"
+       inkscape:export-filename="/home/alessandro/Projects/iwtraining/FRONT-14/front-14-app/public/img/logo.png"
+       inkscape:export-xdpi="217.35001"
+       inkscape:export-ydpi="217.35001" />
+    <text
+       xml:space="preserve"
+       transform="matrix(3.1761347,0,0,3.1761347,-355.13321,-1229.9561)"
+       id="text1287"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1289);fill:#000000;fill-opacity:1;stroke:none"><tspan
+         x="141.69727"
+         y="450.1675"
+         id="tspan5968"><tspan
+           style="font-family:Bariol;-inkscape-font-specification:Bariol;fill:#ffffff"
+           id="tspan5966">$</tspan></tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.198025"
+       id="rect5716"
+       width="140.54135"
+       height="2.0194225"
+       x="57.488483"
+       y="236.25629"
+       ry="1.0097113"
+       rx="1.7907434" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.198025"
+       id="rect5922"
+       width="140.54135"
+       height="2.0194225"
+       x="57.488483"
+       y="72.214554"
+       ry="1.0097113"
+       rx="1.7907434" />
+  </g>
+</svg>
