@@ -20,7 +20,6 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { pink, red } from '@mui/material/colors';
 
-import Drawer from '@mui/material/Drawer';
 
 export default function Navbar() {
   const [auth, setAuth] = React.useState(true);
@@ -31,12 +30,6 @@ export default function Navbar() {
   const openCloseSidebar = () => {
     setSidebar(!sidebar);
   };
-
-  const [sidebar, setSidebar] = React.useState(false);
-
-const openCloseSidebar = () => {
-  setSidebar(!sidebar);
-}
 
 
   const handleChange = (event) => {
@@ -56,7 +49,7 @@ const openCloseSidebar = () => {
     <Box sx={{ flexGrow: 1 }}>
 
       <Drawer open={sidebar} onClose={openCloseSidebar}>
-        MENU
+        <MenuApp/>
         </Drawer>
 
 

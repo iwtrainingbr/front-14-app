@@ -5,7 +5,9 @@ import Tutorial from "../pages/Tutorial";
 import RecuperarSenha from "../pages/RecuperarSenha";
 import Carrinho from "../pages/Carrinho";
 import Example from "../pages/Example";
+import Sobre from "../pages/Sobre";
 import Navbar from "../components/Navbar";
+import NotFound from "../pages/NotFound";
 import { useLocation } from "react-router-dom";
 
 export default function Routes() {
@@ -31,7 +33,12 @@ export default function Routes() {
                 <Route path="/cadastro" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/tutorial" element={<Tutorial />} />
+                <Route path="/sobre" element={<Sobre />} />
+
                 <Route path="/recuperarsenha" element={<RecuperarSenha />} />
+                
+
+                <Route path="/*" element={<NotFound />} />
                 </ReactRoutes>
             </div>
         </div>
